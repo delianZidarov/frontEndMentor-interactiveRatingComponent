@@ -1,2 +1,155 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Orange: hsl(25, 97%, 53%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light Grey: hsl(217, 12%, 63%)
+- Medium Grey: hsl(216, 12%, 54%)
+- Dark Blue: hsl(213, 19%, 18%)
+- Very Dark Blue: hsl(216, 12%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Overpass](https://fonts.google.com/specimen/Overpass)
+- Weights: 400, 700 */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  /* colors */
+  --primary-color: hsl(25, 97%, 53%);
+
+  --secondary-color-strong: hsl(0, 0%, 100%);
+  --secondary-color-weak: hsl(217, 12%, 63%);
+  --secondary-color-medium: hsl(216, 12%, 54%);
+
+  --background-color-strong: hsl(216, 12%, 8%);
+  --background-color: hsl(213, 19%, 18%);
+  --background-color-weak: hsl(211, 20%, 21%);
+
+  /* border radius */
+  --card-border-radius: 0.8rem;
+  /* margins */
+  --card-margin: 1rem;
+  /* fonts*/
+  --font: "Overpass", sans-serif;
+  --font-size-paragraph: 0.9375rem; /*15px based on default*/
+}
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: var(--font);
+  background-color: hsl(228, 11%, 9%);
+}
+h2 {
+  margin-left: var(--card-margin);
+  color: var(--secondary-color-strong);
+}
+p {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: var(--card-margin);
+}
+#star {
+  border-radius: 50%;
+  padding: 1rem;
+  margin: var(--card-margin);
+  background-color: hsl(211, 20%, 21%);
+}
+.card {
+  padding: 0.3rem;
+  width: 90vw;
+  border-radius: var(--card-border-radius);
+  background-color: var(--background-color);
+  color: var(--secondary-color-weak);
+}
+
+.rating-container form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem;
+}
+.rating-container label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background-color: var(--background-color-weak);
+}
+.rating-container input[type="radio"] {
+  display: none;
+}
+.rating-container button {
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+
+  color: var(--secondary-color-strong);
+  background-color: var(--primary-color);
+  border: none;
+}
+.rating {
+  display: none;
+}
+.thank-you {
+  text-align: center;
+}
+.rating-display {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  color: var(--primary-color);
+  background-color: var(--background-color-weak);
+}
+.rating-display p {
+  padding: 0.5em;
+  margin: 0;
+}
+.attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.rating-container input[type="radio"]:checked + label {
+  color: var(--secondary-color-strong);
+  background-color: var(--secondary-color-weak);
+}
+.rating-container input[type="radio"]:hover + label {
+  color: var(--secondary-color-strong);
+  background-color: var(--primary-color);
+}
+.rating-container button:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color-strong);
 }
