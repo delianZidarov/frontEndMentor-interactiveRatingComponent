@@ -73,6 +73,9 @@ p {
   line-height: 1.5em;
   margin: var(--card-margin);
 }
+img {
+  margin-top: 1rem;
+}
 #star {
   border-radius: 50%;
   padding: 1rem;
@@ -82,6 +85,7 @@ p {
 .card {
   padding: 0.3rem;
   width: 90vw;
+  max-width: 37ch;
   border-radius: var(--card-border-radius);
   background-color: var(--background-color);
   color: var(--secondary-color-weak);
@@ -119,22 +123,31 @@ p {
   background-color: var(--primary-color);
   border: none;
 }
-.rating {
-  display: none;
-}
+
 .thank-you {
+  display: none;
   text-align: center;
+}
+.image-container {
+  margin-top: 1rem;
 }
 .rating-display {
   display: inline-block;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   border-radius: 2rem;
+  line-height: 1rem;
   color: var(--primary-color);
   background-color: var(--background-color-weak);
 }
 .rating-display p {
+  font-size: var(--font-size-paragraph);
+  font-weight: 400;
   padding: 0.5em;
   margin: 0;
+}
+.thank-you-message {
+  margin-bottom: 2rem;
 }
 .attribution {
   position: absolute;
